@@ -1,0 +1,247 @@
+@import "./variables";
+
+@font-face {
+  font-family: '#{$mp5-icon-font-family}';
+  src:  url('#{$mp5-icon-font-path}/#{$mp5-icon-font-family}.eot?ekedfh');
+  src:  url('#{$mp5-icon-font-path}/#{$mp5-icon-font-family}.eot?ekedfh#iefix') format('embedded-opentype'),
+    url('#{$mp5-icon-font-path}/#{$mp5-icon-font-family}.ttf?ekedfh') format('truetype'),
+    url('#{$mp5-icon-font-path}/#{$mp5-icon-font-family}.woff?ekedfh') format('woff'),
+    url('#{$mp5-icon-font-path}/#{$mp5-icon-font-family}.svg?ekedfh##{$mp5-icon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.mp5-icons {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$mp5-icon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ico-link {
+  &:before {
+    content: $ico-link;
+  }
+}
+.ico-image-annotation {
+  &:before {
+    content: $ico-image-annotation;
+  }
+}
+.ico-ruler {
+  &:before {
+    content: $ico-ruler;
+  }
+}
+.ico-doc {
+  &:before {
+    content: $ico-doc;
+  }
+}
+.ico-waveform {
+  &:before {
+    content: $ico-waveform;
+  }
+}
+.ico-photo-output {
+  &:before {
+    content: $ico-photo-output;
+  }
+}
+.ico-textfield-checkmark {
+  font-size: 2.125rem !important;
+  &:before {
+    content: $ico-textfield-checkmark;
+  }
+}
+.ico-photo-on-rectangle-angled {
+  &:before {
+    content: $ico-photo-on-rectangle-angled;
+  }
+}
+.ico-list-number {
+  &:before {
+    content: $ico-list-number;
+  }
+}
+.ico-arrow-reload {
+  &:before {
+    content: $ico-arrow-reload;
+  }
+}
+.ico-doc-badge-plus {
+  &:before {
+    content: $ico-doc-badge-plus;
+  }
+}
+.ico-link-badge-plus {
+  &:before {
+    content: $ico-link-badge-plus;
+  }
+}
+.ico-film {
+  &:before {
+    content: $ico-film;
+  }
+}
+.ico-map-pin-and-ellipse {
+  &:before {
+    content: $ico-map-pin-and-ellipse;
+  }
+}
+.ico-multichoice {
+  font-size: 3rem !important;
+  margin: 0 !important;
+  max-height: 46px;
+  &:before {
+    content: $ico-multichoice;
+  }
+}
+.ico-tree {
+  &:before {
+    content: $ico-tree;
+  }
+}
+.ico-list {
+  &:before {
+    content: $ico-list;
+  }
+}
+.ico-location {
+  &:before {
+    content: $ico-map-pin-and-ellipse;
+  }
+}
+.ico-lock {
+  &:before {
+    content: $ico-lock;
+  }
+}
+.ico-url {
+  &:before {
+    content: $ico-url;
+  }
+}
+.ico-doc-richtext {
+  &:before {
+    content: $ico-doc-richtext;
+  }
+}
+.ico-number {
+  &:before {
+    content: $ico-number;
+  }
+}
+.ico-calendar {
+  &:before {
+    content: $ico-calendar;
+  }
+}
+.ico-cameraoutline {
+  &:before {
+    content: $ico-cameraoutline;
+  }
+}
+.ico-upload-square {
+  &:before {
+    content: $ico-upload-square;
+  }
+}
+.ico-videooutline {
+  &:before {
+    content: $ico-videooutline;
+  }
+}
+.ico-mic {
+  &:before {
+    content: $ico-mic;
+  }
+}
+.ico-dropdownfield {
+  font-size: 2.125rem !important;
+  &:before {
+    content: $ico-dropdownfield;
+  }
+}
+.ico-textfield {
+  font-size: 2.125rem !important;
+  &:before {
+    content: $ico-textfield;
+  }
+}
+.ico-radios {
+  &:before {
+    content: $ico-radios;
+  }
+}
+.ico-stars {
+  &:before {
+    content: $ico-stars;
+  }
+}
+.ico-photo {
+  font-size: 2.25rem !important;
+  max-height: 30px !important;
+  margin: 0.35rem 0 0.65rem 0 !important;
+  &:before {
+    content: $ico-photo;
+  }
+}
+.ico-slider-horizontal {
+  &:before {
+    content: $ico-slider-horizontal;
+  }
+}
+.ico-checkbox {
+  &:before {
+    content: $ico-checkbox;
+  }
+}
+.ico-magic-sparkles-s {
+  &:before {
+    content: $ico-magic-sparkles-s;
+  }
+}
+.ico-rules {
+  &:before {
+    content: $ico-rules;
+  }
+}
+
+
+/*
+######## Fontawesome reboot/expention
+ */
+
+.mp5-saving-icons{
+  position: relative;
+  &:after{
+    font-family: '#{$mp5-icon-font-family}' !important;
+    position: absolute;
+    content: $ico-arrow-reload;
+    font-size: .688rem;
+    display: block;
+    top: -.35rem;
+    right: -.45rem;
+    animation:spin 1.5s linear infinite;
+  }
+  & + span{
+    position: relative;
+    top: -4px
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform:rotate(360deg);
+  }
+}

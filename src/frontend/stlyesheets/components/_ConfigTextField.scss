@@ -1,0 +1,218 @@
+.MP5__configTextField__groupWrapper {
+  .MP5__configTextField__wrapper {
+    border: 1px solid var(--border-color);
+    box-shadow: none;
+  }
+  .accordion-title {
+    .textTitleHead {
+      margin-left: 1rem;
+    }
+  }
+}
+.MP5__configTextField__wrapper {
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 0 6px var(--shadow-color);
+  border: none;
+  border-radius: 0.5rem;
+  .accordion-wrapper {
+    & + * {
+      margin-top: 0;
+    }
+  }
+
+  & .MP5__configTextField__content {
+    &.col {
+      max-width: calc(100% - 32px);
+    }
+  }
+
+  .accordion-item {
+    overflow: hidden;
+    height: auto;
+    max-height: 9999px;
+    border: none;
+    background-color: transparent;
+    transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+  }
+
+  .accordion-item.collapsed {
+    max-height: 0;
+    transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+  }
+
+  .accordion-title {
+    font-weight: 600;
+    cursor: pointer;
+    display: flow-root;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0 12px 22px;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    &:before {
+      content: "\f054";
+      display: inline-block;
+      position: relative;
+      top: 1px;
+      color: $MP5-primary-blue;
+      -webkit-text-stroke: 1px $MP5-primary-blue;
+      font-family: var(--fa-style-family, "Font Awesome 6 Free");
+      font-size: 0.925rem;
+      font-weight: bold;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover,
+    &.open {
+      color: var(--black);
+    }
+
+    &.open {
+      &::after {
+        content: "";
+        border-top: 0;
+        border-bottom: 5px solid;
+      }
+      &:before {
+        transform: rotate(90deg) translateX(-1px);
+      }
+    }
+  }
+
+  .accordion-content {
+    padding: 1em 1.5em;
+  }
+
+  .accordion-ellipsis {
+    width: 32px;
+    letter-spacing: 0px;
+    color: var(--gray-30);
+    opacity: 1;
+    padding-top: 1.5px;
+    text-align: center;
+    border-left: 1px solid #e0e0e0;
+    & [class*="fa-ellipsis"] {
+      -webkit-text-stroke: 1px var(--gray-30);
+      transform: scaleY(1.25);
+    }
+  }
+
+  .textLabelHead {
+    padding-left: 30px;
+    text-align: left;
+    font: 600 18px/29px "OpenSans";
+    letter-spacing: 0px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .textTitleHead {
+    font: normal 12px/17px "OpenSans";
+    margin-left: 16px;
+    letter-spacing: 0px;
+    color: #808080;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .min-max-values span {
+    display: flex;
+  }
+
+  .min-max-values span span {
+    margin-right: 8px;
+    margin-top: 3px;
+  }
+
+  select.form-control {
+    -webkit-appearance: menulist;
+  }
+
+  & .MP5__configTextField__childAccordion {
+    &:not(:last-child) {
+      & #accordion,
+      & .accordion {
+        &:not(.open) {
+          border-bottom: 1px solid var(--gray-20);
+        }
+      }
+    }
+    & #accordion,
+    & .accordion {
+      & .accordion-title {
+        padding-left: 0;
+
+        &:before {
+          top: 0;
+        }
+
+        & span {
+          &.type {
+            padding-left: 11px;
+          }
+        }
+      }
+
+      & .accordion-content {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+.MP5__configTextField__wrapper:hover {
+  border-color: #147bfc;
+}
+
+.MP5__ConfigRuler_wrapper {
+  .accordion-title {
+    text-align: center;
+
+    &:before {
+      float: left;
+    }
+
+    .textLabelHead {
+      display: inline;
+      padding-left: 0 !important;
+    }
+  }
+
+  .accordion-title.open {
+    text-align: left;
+  }
+}
+
+.MP5__fileInput__wrapper {
+  .MP5__fileInput__btn,
+  .MP5__fileInput__upload_btn,
+  .MP5__fileInput__placeholder {
+    height: calc(3.125rem + 2px);
+    padding: 0.75rem;
+  }
+}
+
+.mp5__configTextField__annotation_step {
+  .accordion-title {
+    width: calc(100% - 35px);
+  }
+}
+
+.MP5__accordion__deleteIcon {
+  display: inline-block;
+  float: right;
+  padding: 0.75rem 0;
+  max-width: 35px;
+}
+
+.MP5--language-locale {
+  /* to delete later*/
+  position: absolute;
+  z-index: 1;
+  right: 70px;
+  top: 10px
+}

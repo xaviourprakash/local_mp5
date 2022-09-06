@@ -1,0 +1,303 @@
+.add-icon--blue,
+.close-icon--blue {
+  position: absolute;
+  display: flex;
+  right: 1.5rem;
+  bottom: 1rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: $MP5-primary-blue;
+  font-size: 2.25rem;
+  color: var(--white);
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: lighten($MP5-primary-blue, 7%);
+  }
+}
+.add-icon--blue {
+  &:focus {
+    transform: rotate(-225deg);
+  }
+}
+.close-icon--blue {
+  &:focus {
+    transform: rotate(225deg);
+  }
+}
+
+.MP5__addElement__container {
+  padding: 0.5rem 0 0 !important;
+  height: calc(100vh - 45px);
+  overflow: auto;
+  box-shadow: 0 0 6px var(--shadow-color);
+  max-width: 595px;
+  @media screen and (min-width: 559px) {
+    min-width: 560px;
+  }
+  @media screen and (max-width: 992px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: var(--white);
+  }
+
+  .modal-type-title {
+    color: #a0a0a0;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 8px 0 10px 0;
+  }
+
+  & .search-input-wrapper {
+    & .input-group-text {
+      position: absolute;
+      display: block;
+      z-index: 5;
+      border: 0;
+      background: transparent;
+      color: var(--border-color);
+    }
+    & .form-control {
+      padding-left: 2.5rem;
+      border-radius: 0.25rem !important;
+    }
+  }
+
+  .modal-container {
+    .card {
+      text-align: center;
+      padding-top: 0.5rem;
+      border-radius: 16px;
+      border: 2px solid transparent;
+      box-shadow: 0 0 6px var(--shadow-color);
+      transition: all 0.2s ease-in-out;
+      height: 100%;
+      min-height: 120px;
+      .mp5-icons {
+        position: relative;
+        top: 4px;
+        color: var(--gray-55);
+        margin: 1.75rem 0;
+        font-size: 1.625rem;
+        min-height: 30px;
+      }
+
+      & .card-body {
+        padding: 0.25rem 0.5rem 0.5rem;
+        & .card-titles-container {
+          position: absolute !important;
+          bottom: 6px;
+          right: 0;
+          left: 0;
+          margin: auto;
+          width: calc(100% - 12px);
+          & p {
+            margin: 0;
+          }
+          & .card-title {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 18px;
+          }
+          & .card-sub-title {
+            color: #a0a0a0;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .card:hover {
+      border: 2px solid #147bfc;
+      cursor: pointer;
+    }
+  }
+}
+
+.MB5__formContainer {
+  padding: 2rem !important;
+  background-color: var(--gray-10);
+  height: calc(100vh - 45px);
+  overflow: auto;
+
+  .MB5__form {
+    padding: 0;
+  }
+
+  .MB5__formField {
+    border: none;
+    padding: 0;
+    border-radius: 0.5rem !important;
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+    &[draggable="true"],
+    &.sortable-chosen,
+    &.sortable-ghost,
+    &.sortable-grab,
+    &.background-class {
+      filter: grayscale(1);
+      & input:not([type="checkbox"]),
+      & textarea,
+      & select {
+        background-color: transparent;
+        border-color: var(--border-color);
+      }
+    }
+    &:focus {
+      &.sortable-grab {
+        cursor: grabbing !important;
+      }
+    }
+
+    .fa-clone,
+    .fa-trash {
+      float: right;
+      color: #ffffff;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+      border-left: 1px solid #ffffff;
+    }
+
+    .fa-clone {
+      border: none;
+    }
+
+    .appendContent {
+      display: block;
+      margin: 0 auto;
+      padding: 0 1rem;
+      border: 2px dotted var(--gray-20);
+      border-radius: 50rem;
+      background: var(--white);
+      color: $MP5-primary-blue;
+      transition: all 0.2s cubic-bezier(0.28, 0.84, 0.42, 1);
+      margin-bottom: 3rem;
+      & i {
+        -webkit-text-stroke: 2px $MP5-primary-blue;
+      }
+      &:hover {
+        border-style: solid;
+        border-color: $MP5-primary-blue;
+        & i {
+          -webkit-text-stroke: 2px $MP5-primary-blue;
+        }
+      }
+    }
+  }
+  &.side-panel-open {
+    & .accordion-content {
+      @media screen and (min-width: 1200px) and (max-width: 1500px) {
+        & .col-lg-6.row {
+          width: 100%;
+          & .col-lg-6 {
+            flex: 1 0;
+          }
+        }
+        & .col-lg-3 {
+          width: auto !important;
+          & [type="number"] {
+            width: 6rem;
+          }
+        }
+      }
+      @media screen and (max-width: 1200px) {
+        & .col-lg-3 {
+          width: 50%;
+          &:nth-child(2) {
+            padding-right: 0;
+          }
+        }
+        & .col-lg-6 {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.MB5__tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.MB5__tooltip .tooltiptext {
+  background: #147bfc 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 4px;
+  opacity: 0.73;
+  padding: 0.5rem;
+  visibility: hidden;
+  width: max-content;
+  height: 40px;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 6px;
+  left: -75px;
+  position: absolute;
+  z-index: 1;
+}
+
+.MB5__tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.background-class {
+  background-color: rgba(160, 160, 160, 0.15) !important;
+  color: rgba(0, 0, 0, 0.25) !important;
+  border: 1px dashed rgba(160, 160, 160, 0.75) !important;
+  & .MP5_configTextField_wrapper {
+    box-shadow: none;
+  }
+}
+
+.MP5__addElement__container .list-group-item {
+  border: none;
+  padding: .5rem .875rem;
+  background: transparent;
+}
+
+.clone-background-class {
+  background-color: rgba(160, 160, 160, 0.15) !important;
+  color: rgba(0, 0, 0, 0.25) !important;
+  border: 1px dashed rgba(160, 160, 160, 0.75) !important;
+  opacity: 0.01;
+  & .MP5_configTextField_wrapper {
+    box-shadow: none;
+  }
+}
+
+.remove-clone-form-element {
+  &.sortable-chosen {
+    border-radius: 0.5rem !important;
+    &.background-class {
+      margin-bottom: 1rem;
+      & .MP5_FormbuilderAddElement {
+        visibility: hidden;
+        height: 70px;
+      }
+    }
+  }
+}
+.cursor-remUnder {
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+.fs-7 {
+  font-size: 12px;
+}
+
+.resize_none {
+  resize: none;
+}
+
+.MP5__orderForm_previewBriefing {
+  background-color: var(--gray-10);
+  border-radius: 0.5rem;
+}

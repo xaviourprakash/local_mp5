@@ -1,0 +1,50 @@
+@import "colors";
+@import "fontsize";
+@import "./vendors/opensans";
+@import "./mp5_icons/mp5_icons";
+
+$MP5-padding-md: 2rem; //32px
+$MP5-padding-md: 2rem; //32px
+
+/** cols gaps strengh **/
+.g-newElement, .gy-newElement {
+  --bs-gutter-y: .75rem;
+}
+.g-newElement, .gx-newElement {
+  --bs-gutter-x: .75rem;
+}
+
+.min-h-25{ min-height: 25vh !important; }
+.min-h-50{ min-height: 50vh !important; }
+.min-h-75{ min-height: 75vh !important; }
+.min-h-100{ min-height: 100vh !important; }
+
+.min-w-25{ min-width: 25vh !important; }
+.min-w-50{ min-width: 50vh !important; }
+.min-w-75{ min-width: 75vh !important; }
+.min-w-100{ min-width: 100vh !important; }
+
+.fw-semibold{ font-weight: 600 !important; }
+
+.bg-light{ background-color: var(--wp-outline-input-color) !important; }
+
+.rounded-WPCard{
+  border-radius: 1.25rem;
+  & .card-header:first-child{ border-radius: 1.25rem 1.25rem 0 0; }
+  & .card-body:last-child{ border-radius: 0 0 1.25rem 1.25rem; }
+}
+.btn {
+  &.btn-data-transfer{
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 0;
+    border: none !important;
+    outline: 0 !important;
+    &:focus{
+      outline: 0 !important;
+    }
+  }
+}

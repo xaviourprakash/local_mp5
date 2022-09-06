@@ -1,0 +1,41 @@
+$MP5-gray-10: #EFEFEF;
+$MP5-gray-10: #EFEFEF;
+$MP5-gray-15: #FCFCFC;
+$MP5-gray-20: #D8D8D8;
+$MP5-gray-30: #E0E0E0;
+$MP5-gray-40: #E3E3E3;
+$MP5-gray-50: #A0A0A0;
+$MP5-gray-55: #808080;
+$MP5-gray-60: #666666;
+$MP5-gray-70: #343A40;
+$MP5-gray-80: rgba(0, 0, 0, 0.15); //Note for OD: to discuss & refactor
+$MP5-gray-85: rgba(0, 0, 0, 0.25); //Note for OD: to discuss & refactor
+$MP5-gray-90: #212529;
+
+$MP5-primary-blue: #147BFC;
+$MP5-secondary-blue: #007BFF;
+$MP5-skyblue: #74CBF3;
+$MP5-primary-orange :#F6A500;
+$MP5-secondary-orange: #ED704C;
+$MP5-pink: #D66986;
+$MP5-lightpink: #FBD6C1;
+$MP5-yellow: #FFE964;
+$MP5-purple: #8C80BA;
+$MP5-green: #97C66D;
+
+:root{
+  --shadow-color: #{$MP5-gray-80};
+  --border-color: #{$MP5-gray-20};
+  --white: #FFFFFF;
+  --gray-5: #{$MP5-gray-10};
+  --gray-10: #{$MP5-gray-10};
+  --gray-20: #{$MP5-gray-20};
+  --gray-30: #{$MP5-gray-30};
+  --gray-40: #{$MP5-gray-40};
+  --gray-50: #{$MP5-gray-50};
+  --gray-55: #{$MP5-gray-55};
+  --black: #000000;
+  --text-color: #{$MP5-gray-70};
+  --preview-text-color: #00264d;
+  --wp-outline-input-color: #f5f5f5;
+}

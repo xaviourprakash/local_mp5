@@ -1,0 +1,24 @@
+html, body{
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'OpenSans' !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color);
+  &>* {
+    font-family: 'OpenSans' !important;
+  }
+}
+.border-x{
+  border-left: 1px solid var(--gray-40);
+  border-right: 1px solid var(--gray-40);
+}
+.border-y{
+  border-top: 1px solid var(--gray-40);
+  border-bottom: 1px solid var(--gray-40);
+}
+
+
+

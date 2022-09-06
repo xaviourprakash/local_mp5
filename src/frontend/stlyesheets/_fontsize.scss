@@ -1,0 +1,38 @@
+/* TITLE TEXT SIZES */
+$cww-title-size0: 1.5rem !default; // 32px
+$cww-title-size1: 1.25rem !default; // 32px
+$cww-title-size2: 1.063rem !default; // 26px
+$cww-title-size3: 1rem !default; // 24px
+$cww-title-size4: .9rem !default; // 22px
+$cww-title-size5: .875rem !default; // 20px
+$cww-title-size6: .75rem !default; // 18px
+
+/* STANDARD TEXT SIZES */
+$cww-txt-size0: 1.125rem !default; // 20px
+$cww-txt-size1: 0.9381rem !default; // 16px
+$cww-txt-size2: .9rem !default; // 16px
+$cww-txt-size3: .875rem !default; // 14px
+$cww-txt-size4: .75rem !default; // 12px
+$cww-txt-size5: .688rem !default; // 11px
+$cww-txt-size6: .5rem !default; // 8px
+
+
+:root,
+[data-accessibility="default"] {
+  /* TITLE TEXT SIZES */
+  --cww-title-size0: #{$cww-title-size0}; // 32px
+  --cww-title-size1: #{$cww-title-size1}; // 32px
+  --cww-title-size2: #{$cww-title-size2}; // 26px
+  --cww-title-size3: #{$cww-title-size3}; // 24px
+  --cww-title-size4: #{$cww-title-size4}; // 22px
+  --cww-title-size5: #{$cww-title-size5}; // 20px
+  --cww-title-size6: #{$cww-title-size6}; // 18px
+  /* STANDARD TEXT SIZES */
+  --cww-txt-size0: #{$cww-txt-size0}; // 20px
+  --cww-txt-size1: #{$cww-txt-size1}; // 18px
+  --cww-txt-size2: #{$cww-txt-size2}; // 16px
+  --cww-txt-size3: #{$cww-txt-size3}; // 14px
+  --cww-txt-size4: #{$cww-txt-size4}; // 12px
+  --cww-txt-size5: #{$cww-txt-size5}; // 11px
+  --cww-txt-size6: #{$cww-txt-size6}; // 8px
+}
